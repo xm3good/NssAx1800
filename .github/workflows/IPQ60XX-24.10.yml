@@ -76,12 +76,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SSRPLUS_SH
 
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-
     - name: Generate Variables(生成变量)
       run: |
         cp $CONFIG_FILE $OPENWRT_PATH/.config
