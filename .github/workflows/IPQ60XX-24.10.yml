@@ -93,6 +93,7 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
+        git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
         ./scripts/feeds install -a
   
     - name: Load Custom Configuration(加载自定义配置)
